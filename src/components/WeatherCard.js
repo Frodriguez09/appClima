@@ -21,14 +21,20 @@ const WeatherCard = ({ city, weather, temp }) => {
   };
 
   return (
-  <div className="col-lg-6 text-center col-sm-12 card mt-3 mx-4">
+  <div className="col-lg-12 text-center col-sm-12 card my-3">
     <div className='row'>
         <div className='col-6 card-body'>
-            <h2 className='city text-center card-title'>{city}</h2>
+            <h2 className='city text-center card-title text-primary'>{city}</h2>
         </div>
         <div className='col-6 card-text'>
-            <div className="weather-icon">{getWeatherIcon()}</div>
-            <div className="temp">{temp}°C</div>
+          <div className='row'>
+            <div className='col-6'>
+            <div className="weather-icon text-warning">{getWeatherIcon()}</div>
+            </div>
+            <div className='col-6'>
+            <div className="temp text-warning">{temp}°C</div>
+            </div>
+          </div>
         </div>
     </div>
   </div>

@@ -11,8 +11,8 @@ const ButtonPush = () =>{
         });
     }
     return(
-        <div className="col-12">
-            <button onClick={notificacion} type="button" className="btn btn-primary">Notificacion</button>
+        <div className="col-12 d-grid gap-1">
+            <button onClick={notificacion} type="button" className="btn btn-lg btn-success fw-bold fs-3">Notificacion Push</button>
         </div>
     );
 };

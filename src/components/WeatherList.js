@@ -9,7 +9,7 @@ const WeatherList = () => {
   const [weatherData, setWeatherData] = useState([]);
 
   useEffect(() => {
-    const cities = ['Mexicali', 'New York', 'Tokyo', 'Tijuana', 'Tecate'];
+    const cities = ['Mexicali', 'New York', 'Tokyo', 'Tijuana', 'Tecate', 'Hermosillo'];
     const promises = [];
 
     cities.forEach(city => {
@@ -36,23 +36,29 @@ const WeatherList = () => {
 
   return (
     <>
+
       <div className="container">
         <div className='row'>
-            <div className='col-12 mt-3'>
+        <div className='col-12 mt-3'>
                 <ButtonPush/>
             </div>
-            <div className='col-12'>
-                {weatherData.map((data, index) => (
-                <WeatherCard
-                    key={index}
-                    city={data.city}
-                    weather={data.weather}
-                    temp={data.temp}
-                />
-                ))}
-            </div>
+                  {weatherData.map((data, index) => (
+              <div className='col-lg-6 col-sm-12'>
+                  <WeatherCard
+                      key={index}
+                      city={data.city}
+                      weather={data.weather}
+                      temp={data.temp}
+                  />
+              </div>
+                  ))}
+              <div className='col-12 mt-3'>
+                  <h2 className='city text-center card-title text-light'>Luis Fernando Rodriguez Osuna</h2>
+                  <h2 className='city text-center card-title text-light'>IDGS 10-3</h2>
+              </div>
         </div>
       </div>
+      
     </>
   );
 };
